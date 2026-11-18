@@ -1,0 +1,78 @@
+<!-- HÉROS DE PAGE -->
+<section class="hero hero--page">
+  <div class="hero__bg">
+    <img src="assets/img/services/gants-presentation.webp" alt="Conseillère présentant un bijou avec des gants" loading="lazy" width="1200" height="1794">
+  </div>
+  <div class="container hero__inner">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li aria-current="page">Avis clients</li>
+      </ul>
+    </nav>
+    <h1>Ce qu&rsquo;on dit de nous</h1>
+    <p style="max-width:60ch">Fiançailles, réparations de famille, créations sur mesure : les mots de nos clients, tels qu&rsquo;ils nous les ont confiés. Avis fictifs — ce site est une démonstration.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="rating-summary reveal">
+      <div class="rating-big">
+        <b>4,9</b>
+        <span class="stars stars--lg" role="img" aria-label="4,9 étoiles sur 5">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        </span>
+        <p class="small" style="color:var(--muted);margin-top:.5rem">sur 312 avis vérifiés</p>
+      </div>
+      <div class="rating-bars">
+        <div class="rating-bar"><span>5 étoiles</span><div class="track"><div class="fill" style="width:91%"></div></div><span>91&nbsp;%</span></div>
+        <div class="rating-bar"><span>4 étoiles</span><div class="track"><div class="fill" style="width:7%"></div></div><span>7&nbsp;%</span></div>
+        <div class="rating-bar"><span>3 étoiles</span><div class="track"><div class="fill" style="width:2%"></div></div><span>2&nbsp;%</span></div>
+        <div class="rating-bar"><span>2 étoiles</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0&nbsp;%</span></div>
+        <div class="rating-bar"><span>1 étoile</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0&nbsp;%</span></div>
+      </div>
+    </div>
+
+    <div class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))" data-avis-grid>
+      <!-- Avis injectés par JS -->
+    </div>
+
+    <div class="empty-state" hidden data-avis-empty>
+      <p>Les avis arrivent bientôt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ivory-2">
+  <div class="container center" style="max-width:680px">
+    <h2>À votre tour ?</h2>
+    <p style="color:var(--muted)">Vous avez vécu la maison de l&rsquo;intérieur : racontez-nous. Et si ce n&rsquo;est pas encore le cas, la boutique vous attend sur rendez-vous.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem">
+      <a class="btn" href="rendez-vous.html">Prendre rendez-vous</a>
+      <a class="btn btn--outline" href="contact.html">Nous écrire</a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector("[data-avis-grid]");
+  if (!ECLAT.AVIS) { document.querySelector("[data-avis-empty]").hidden = false; return; }
+  ECLAT.AVIS.forEach((a, i) => {
+    const el = document.createElement("article");
+    el.className = "review-card reveal" + (i % 3 === 1 ? " reveal-d1" : i % 3 === 2 ? " reveal-d2" : "");
+    el.innerHTML = `
+      <div class="review-meta">${ECLAT.etoiles(a.note)}<span>${a.date}</span></div>
+      <blockquote>${a.titre}</blockquote>
+      <p>${a.texte}</p>
+      <div class="review-meta"><b>${a.nom}</b><span>${a.lieu}</span></div>`;
+    grid.appendChild(el);
+  });
+  requestAnimationFrame(() => grid.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible")));
+});
+</script>

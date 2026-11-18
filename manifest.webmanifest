@@ -1,0 +1,15 @@
+{
+  "name": "Éclat d'Or — Maison de joaillerie, Paris",
+  "short_name": "Éclat d'Or",
+  "description": "Maison de joaillerie parisienne depuis 1932 : collections, haute joaillerie et création sur mesure.",
+  "lang": "fr",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#14100C",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,118 @@
+<!-- HÉROS DE PAGE -->
+<section class="hero hero--page">
+  <div class="hero__bg">
+    <img src="assets/img/hero/diamants-nuit.webp" alt="Trois diamants taillés posés sur un tissu bleu nuit" loading="lazy" width="1600" height="1067">
+  </div>
+  <div class="container hero__inner">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li aria-current="page">Boutique</li>
+      </ul>
+    </nav>
+    <h1>La boutique</h1>
+    <p style="max-width:60ch">Vingt-six créations serties à la main, en or 18 carats recyclé. Chaque pièce part avec son certificat, son écrin et la garantie d&rsquo;entretien à vie de la maison.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- Barre de filtres -->
+    <div class="shop-bar">
+      <div class="chips" role="group" aria-label="Filtrer par catégorie">
+        <button class="chip" type="button" data-filter-cat="all" aria-pressed="true">Tout</button>
+        <button class="chip" type="button" data-filter-cat="bagues" aria-pressed="false">Bagues</button>
+        <button class="chip" type="button" data-filter-cat="colliers" aria-pressed="false">Colliers</button>
+        <button class="chip" type="button" data-filter-cat="bracelets" aria-pressed="false">Bracelets</button>
+        <button class="chip" type="button" data-filter-cat="boucles-doreilles" aria-pressed="false">Boucles d&rsquo;oreilles</button>
+        <button class="chip" type="button" data-filter-cat="montres" aria-pressed="false">Montres</button>
+        <button class="chip" type="button" data-filter-cat="haute-joaillerie" aria-pressed="false">Haute joaillerie</button>
+      </div>
+      <div style="display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap">
+        <span class="results-count" data-results-count aria-live="polite"></span>
+        <label class="skip-link" for="tri-select">Trier les pièces</label>
+        <div class="select-wrap">
+          <select id="tri-select" data-tri>
+            <option value="vedette">Tri : Nos vedettes</option>
+            <option value="nouveaute">Nouveautés d&rsquo;abord</option>
+            <option value="prix-asc">Prix croissant</option>
+            <option value="prix-desc">Prix décroissant</option>
+            <option value="nom">Ordre alphabétique</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="chips" role="group" aria-label="Filtrer par collection" style="margin-bottom:1rem">
+      <button class="chip" type="button" data-filter-col="all" aria-pressed="true">Toutes collections</button>
+      <button class="chip" type="button" data-filter-col="Lumière d'Aurore" aria-pressed="false">Lumière d&rsquo;Aurore</button>
+      <button class="chip" type="button" data-filter-col="Nuits de Paris" aria-pressed="false">Nuits de Paris</button>
+      <button class="chip" type="button" data-filter-col="Liens" aria-pressed="false">Liens</button>
+      <button class="chip" type="button" data-filter-col="Héritage" aria-pressed="false">Héritage</button>
+      <button class="chip" type="button" data-filter-col="Haute Joaillerie — Fleuve" aria-pressed="false">Fleuve (haute joaillerie)</button>
+    </div>
+
+    <div class="product-grid" data-grid="shop" aria-live="polite" style="margin-top:1.5rem"></div>
+    <div class="empty-state" data-empty hidden>
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M10 22 L21 9 L43 9 L54 22 L32 55 Z"/><path d="M10 22 H54 M21 9 L27 22 M43 9 L37 22"/></svg>
+      <p><b>Aucune pièce ne correspond à ce filtre.</b></p>
+      <p class="small">Essayez une autre combinaison — ou <a href="sur-mesure.html">créez la vôtre</a>.</p>
+    </div>
+
+    <!-- Réassurance -->
+    <div class="cards" style="margin-top:4rem">
+      <div class="card"><h3 style="font-size:1.05rem">Certificat inclus</h3><p>Chaque pierre de plus de 0,30 ct est accompagnée d&rsquo;un rapport gemmologique indépendant.</p></div>
+      <div class="card"><h3 style="font-size:1.05rem">Livraison assurée</h3><p>Offerte dès 500 €, remise en main propre contre signature, sous 3 à 5 jours ouvrés.</p></div>
+      <div class="card"><h3 style="font-size:1.05rem">Retours 30 jours</h3><p>Changements d&rsquo;avis acceptés — sauf pièces gravées et créations sur mesure, logique oblige.</p></div>
+      <div class="card"><h3 style="font-size:1.05rem">Entretien à vie</h3><p>Nettoyage, contrôle de sertissage et re-lustrage offerts, pour toujours, à l&rsquo;atelier.</p></div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector("[data-grid='shop']");
+  const empty = document.querySelector("[data-empty]");
+  const countEl = document.querySelector("[data-results-count]");
+  const triEl = document.querySelector("[data-tri]");
+  const catBtns = document.querySelectorAll("[data-filter-cat]");
+  const colBtns = document.querySelectorAll("[data-filter-col]");
+  let cat = "all", col = "all";
+
+  const params = new URLSearchParams(location.search);
+  const catParam = params.get("cat");
+  const colParam = params.get("col");
+  if (catParam && document.querySelector(`[data-filter-cat="${catParam}"]`)) {
+    cat = catParam;
+  }
+  if (colParam) {
+    col = colParam;
+  }
+
+  function syncButtons() {
+    catBtns.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.filterCat === cat)));
+    colBtns.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.filterCol === col)));
+  }
+
+  function apply() {
+    let list = ECLAT.PRODUITS.filter(p => (cat === "all" || p.categorie === cat) && (col === "all" || p.collection === col));
+    const tri = triEl.value;
+    if (tri === "prix-asc") list.sort((a, b) => a.prix - b.prix);
+    else if (tri === "prix-desc") list.sort((a, b) => b.prix - a.prix);
+    else if (tri === "nom") list.sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
+    else if (tri === "nouveaute") list.sort((a, b) => (b.nouveaute ? 1 : 0) - (a.nouveaute ? 1 : 0));
+    else list.sort((a, b) => (b.coupDeCoeur ? 1 : 0) - (a.coupDeCoeur ? 1 : 0));
+
+    grid.innerHTML = "";
+    list.forEach(p => grid.appendChild(ECLAT.productCard(p, { tax: true })));
+    requestAnimationFrame(() => grid.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible")));
+    countEl.textContent = list.length === 1 ? "1 pièce" : list.length + " pièces";
+    empty.hidden = list.length > 0;
+    syncButtons();
+  }
+
+  catBtns.forEach(b => b.addEventListener("click", () => { cat = b.dataset.filterCat; apply(); }));
+  colBtns.forEach(b => b.addEventListener("click", () => { col = b.dataset.filterCol; apply(); }));
+  triEl.addEventListener("change", apply);
+  apply();
+});
+</script>

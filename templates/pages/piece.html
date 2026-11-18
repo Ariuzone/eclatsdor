@@ -1,0 +1,176 @@
+<!-- FICHE PRODUIT (rendue par JS selon ?id=) -->
+<section class="section" style="padding-top:calc(var(--header-h) + 2.5rem)">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane" style="color:var(--muted)">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="collections.html">Boutique</a></li>
+        <li aria-current="page" data-crumb-nom>—</li>
+      </ul>
+    </nav>
+    <div class="product-layout" data-piece-wrap hidden>
+      <div class="product-gallery">
+        <div class="product-gallery__main">
+          <img data-piece-img alt="" width="900" height="1100" loading="eager" id="piece-img">
+        </div>
+        <p class="small" style="color:var(--muted);margin-top:.8rem;display:flex;gap:.5rem;align-items:center">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg>
+          Photographie d&rsquo;ambiance — la pièce vous est présentée en détail lors du rendez-vous.
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow" data-piece-cat></p>
+        <h1 data-piece-nom style="margin-bottom:.2rem"></h1>
+        <p class="lead" data-piece-collection style="margin-bottom:0"></p>
+        <p class="product-price"><span data-piece-prix></span><small>Écrin, certificat et gravure intérieure offerts</small></p>
+        <p data-piece-description style="color:var(--text)"></p>
+        <dl class="specs">
+          <div style="display:contents"><dt data-spec-label-1>Matière</dt><dd data-piece-matiere></dd></div>
+          <div style="display:contents"><dt>Pierre</dt><dd data-piece-pierre></dd></div>
+          <div style="display:contents"><dt>Carats</dt><dd data-piece-carats></dd></div>
+          <div style="display:contents"><dt>Dimensions</dt><dd data-piece-dimensions></dd></div>
+        </dl>
+        <div class="field" data-taille-field hidden style="max-width:280px">
+          <label for="taille-select">Taille <span class="req">*</span></label>
+          <div class="select-wrap">
+            <select id="taille-select" data-piece-taille>
+              <option value="48">48 — 15,3 mm de diamètre</option>
+              <option value="50">50 — 15,9 mm</option>
+              <option value="52">52 — 16,6 mm</option>
+              <option value="54">54 — 17,2 mm</option>
+              <option value="56">56 — 17,8 mm</option>
+              <option value="58">58 — 18,5 mm</option>
+            </select>
+          </div>
+          <p class="hint">Pas certain de la taille ? Consultez notre <a href="guides.html#tailles">guide des tailles</a> — la première retouche est offerte.</p>
+        </div>
+        <div class="field" style="max-width:280px">
+          <label for="gravure-input">Gravure (offerte, 12 caractères)</label>
+          <input type="text" id="gravure-input" data-piece-gravure maxlength="12" placeholder="Ex. : 14.06.2026">
+          <p class="hint">Pièces gravées : retours non acceptés.</p>
+        </div>
+        <div class="buy-row">
+          <div class="qty">
+            <button type="button" data-qty="-1" aria-label="Diminuer la quantité">−</button>
+            <input type="number" value="1" min="1" max="10" data-piece-qty aria-label="Quantité">
+            <button type="button" data-qty="1" aria-label="Augmenter la quantité">+</button>
+          </div>
+          <button class="btn btn--gold" type="button" data-piece-add>Ajouter au panier</button>
+          <button class="btn btn--outline" type="button" data-piece-wish>Mettre de côté</button>
+        </div>
+        <ul class="product-assurance" style="list-style:none">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Livraison assurée offerte dès 500 € — remise contre signature</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Retour sous 30 jours, sauf pièce gravée ou sur mesure</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Entretien à vie : nettoyage et contrôle de sertissage offerts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Sertie à la main, square Vendôme — série signée et numérotée</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="empty-state" data-piece-introuvable hidden>
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M10 22 L21 9 L43 9 L54 22 L32 55 Z"/><path d="M10 22 H54 M21 9 L27 22 M43 9 L37 22"/></svg>
+      <p><b>Cette pièce est introuvable.</b></p>
+      <p class="small">Elle a peut-être trouvé preneur. Découvrez celles qui vous ressemblent.</p>
+      <p><a class="btn" href="collections.html">Voir toute la boutique</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- SUGGESTIONS -->
+<section class="section section--ivory-2" data-suggestions-section hidden>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Dans le même esprit</p>
+      <h2>Pièces suggérées</h2>
+    </div>
+    <div class="product-grid" data-suggestions></div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  const p = (ECLAT.PRODUITS || []).find(x => x.id === id);
+  const wrap = document.querySelector("[data-piece-wrap]");
+  const introuvable = document.querySelector("[data-piece-introuvable]");
+  if (!p) {
+    introuvable.hidden = false;
+    document.title = "Pièce introuvable | Éclat d'Or";
+    return;
+  }
+  const CATS = ECLAT.cats;
+  const $ = sel => document.querySelector(sel);
+
+  wrap.hidden = false;
+  document.title = `${p.nom} | Éclat d'Or`;
+  document.querySelector('meta[name="description"]').setAttribute("content", p.description.slice(0, 155) + "…");
+  $("[data-crumb-nom]").textContent = p.nom;
+  $("[data-piece-img]").src = p.image;
+  $("[data-piece-img]").alt = p.nom + " — " + (p.pierre !== "—" ? p.pierre : p.matiere);
+  $("[data-piece-cat]").textContent = (CATS[p.categorie] || p.categorie) + " · " + p.collection;
+  $("[data-piece-nom]").textContent = p.nom;
+  $("[data-piece-collection]").textContent = p.description;
+  $("[data-piece-prix]").textContent = ECLAT.fmtPrix(p.prix);
+  $("[data-piece-matiere]").textContent = p.matiere;
+  $("[data-piece-pierre]").textContent = p.pierre;
+  $("[data-piece-carats]").textContent = p.carats;
+  $("[data-piece-dimensions]").textContent = p.dimensions;
+  $("[data-taille-field]").hidden = p.categorie !== "bagues";
+
+  const qtyInput = $("[data-piece-qty]");
+  document.querySelectorAll("[data-qty]").forEach(b => b.addEventListener("click", () => {
+    qtyInput.value = Math.min(10, Math.max(1, (+qtyInput.value || 1) + (+b.dataset.qty)));
+  }));
+
+  const wishBtn = $("[data-piece-wish]");
+  wishBtn.setAttribute("aria-pressed", String(ECLAT.wishes.has(p.id)));
+  wishBtn.textContent = ECLAT.wishes.has(p.id) ? "Dans vos favoris" : "Mettre de côté";
+  wishBtn.addEventListener("click", () => {
+    const on = ECLAT.wishes.toggle(p.id);
+    wishBtn.setAttribute("aria-pressed", String(on));
+    wishBtn.textContent = on ? "Dans vos favoris" : "Mettre de côté";
+  });
+
+  $("[data-piece-add]").addEventListener("click", () => {
+    const opts = {};
+    if (p.categorie === "bagues") opts.taille = $("[data-piece-taille]").value;
+    const g = $("[data-piece-gravure]").value.trim();
+    if (g) opts.gravure = g;
+    ECLAT.cart.add(p.id, Math.max(1, +qtyInput.value || 1), opts);
+    ECLAT.toast(`<b>${p.nom}</b> ajoutée à votre panier`, "Voir le panier", "panier.html");
+    ECLAT.openCart();
+  });
+
+  /* Données structurées produit */
+  const schema = document.createElement("script");
+  schema.type = "application/ld+json";
+  schema.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": p.nom,
+    "description": p.description,
+    "image": location.origin + "/" + p.image,
+    "brand": { "@type": "Brand", "name": "Éclat d'Or" },
+    "material": p.matiere,
+    "category": ECLAT.cats[p.categorie] || p.categorie,
+    "offers": {
+      "@type": "Offer",
+      "price": p.prix,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  });
+  document.head.appendChild(schema);
+
+  /* Suggestions */
+  const sugg = ECLAT.PRODUITS.filter(x => x.id !== p.id && (x.categorie === p.categorie || x.collection === p.collection)).slice(0, 4);
+  if (sugg.length) {
+    document.querySelector("[data-suggestions-section]").hidden = false;
+    const g = document.querySelector("[data-suggestions]");
+    sugg.forEach(s => g.appendChild(ECLAT.productCard(s)));
+    requestAnimationFrame(() => g.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible")));
+  }
+});
+</script>

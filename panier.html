@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panier & commande | Éclat d'Or</title>
+  <meta name="description" content="Votre panier Éclat d'Or : récapitulatif, livraison offerte dès 500 €, emballage cadeau et commande en quelques instants.">
+  <link rel="canonical" href="https://www.eclatdor-paris.fr/panier">
+  <meta name="theme-color" content="#14100C">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Éclat d'Or">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Panier & commande | Éclat d'Or">
+  <meta property="og:description" content="Votre panier Éclat d'Or : récapitulatif, livraison offerte dès 500 €, emballage cadeau et commande en quelques instants.">
+  <meta property="og:url" content="https://www.eclatdor-paris.fr/panier">
+  <meta property="og:image" content="https://www.eclatdor-paris.fr/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Panier & commande | Éclat d'Or">
+  <meta name="twitter:description" content="Votre panier Éclat d'Or : récapitulatif, livraison offerte dès 500 €, emballage cadeau et commande en quelques instants.">
+  <meta name="twitter:image" content="https://www.eclatdor-paris.fr/og-image.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/fonts/cormorant-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+</head>
+<body class="">
+<a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+<header class="site-header site-header--solid">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Éclat d'Or — Accueil">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="or" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8B77C"/><stop offset=".5" stop-color="#B08D57"/><stop offset="1" stop-color="#8A6A3B"/></linearGradient></defs><g fill="none" stroke="url(#or)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M10 22 L21 9 L43 9 L54 22 L32 55 Z"/><path d="M10 22 H54"/><path d="M21 9 L27 22 M43 9 L37 22"/><path d="M27 22 L32 55 M37 22 L32 55"/><path d="M52 6 V14 M48 10 H56" stroke-width="2"/></g></svg>
+      <span>
+        <span class="brand-name">Éclat d&rsquo;Or</span>
+        <span class="brand-sub">Joaillerie · Paris</span>
+      </span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a><a href="maison.html">La Maison</a><a href="collections.html">Boutique</a><a href="haute-joaillerie.html">Haute Joaillerie</a><a href="sur-mesure.html">Sur Mesure</a><a href="guides.html">Guides</a><a href="galerie.html">Galerie</a><a href="contact.html">Contact</a>
+      <a class="btn btn--outline" href="rendez-vous.html">Rendez-vous</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="favoris.html" aria-label="Mes favoris">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c-4.9-3.4-9-6.7-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.3-4.1 7.6-9 11z"/></svg>
+        <span class="badge-count" data-wish-count data-empty="true">0</span>
+      </a>
+      <button class="icon-btn" type="button" data-open-cart aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 8h12l-1 13H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge-count" data-cart-count data-empty="true">0</span>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-mobile" id="menu-mobile" aria-label="Menu mobile">
+  <div class="nav-mobile-top">
+    <a class="brand" href="index.html" aria-label="Éclat d'Or — Accueil"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="or" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8B77C"/><stop offset=".5" stop-color="#B08D57"/><stop offset="1" stop-color="#8A6A3B"/></linearGradient></defs><g fill="none" stroke="url(#or)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M10 22 L21 9 L43 9 L54 22 L32 55 Z"/><path d="M10 22 H54"/><path d="M21 9 L27 22 M43 9 L37 22"/><path d="M27 22 L32 55 M37 22 L32 55"/><path d="M52 6 V14 M48 10 H56" stroke-width="2"/></g></svg><span><span class="brand-name">Éclat d&rsquo;Or</span></span></a>
+    <button class="icon-btn" type="button" data-close-nav aria-label="Fermer le menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Navigation mobile">
+    <a href="index.html">Accueil<span class="num">01</span></a>
+<a href="maison.html">La Maison<span class="num">02</span></a>
+<a href="collections.html">Boutique<span class="num">03</span></a>
+<a href="haute-joaillerie.html">Haute Joaillerie<span class="num">04</span></a>
+<a href="sur-mesure.html">Sur Mesure<span class="num">05</span></a>
+<a href="services.html">Services<span class="num">06</span></a>
+<a href="guides.html">Guides<span class="num">07</span></a>
+<a href="galerie.html">Galerie<span class="num">08</span></a>
+<a href="avis.html">Avis clients<span class="num">09</span></a>
+<a href="rendez-vous.html">Rendez-vous<span class="num">010</span></a>
+<a href="contact.html">Contact<span class="num">011</span></a>
+
+  </nav>
+  <div class="nav-mobile-footer">
+    <a class="btn btn--gold" href="rendez-vous.html">Prendre rendez-vous</a>
+    <a class="btn btn--outline" href="collections.html">Explorer la boutique</a>
+  </div>
+</div>
+
+<main id="contenu">
+<!-- HÉROS DE PAGE -->
+<section class="hero hero--page" style="min-height:38svh">
+  <div class="hero__bg">
+    <img src="assets/img/services/coffret-noir.webp" alt="Écrin noir de la maison ouvert sur un anneau" loading="lazy" width="1000" height="668">
+  </div>
+  <div class="container hero__inner">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li aria-current="page" data-crumb-label>Panier</li>
+      </ul>
+    </nav>
+    <h1 data-title>Votre panier</h1>
+  </div>
+</section>
+
+<!-- VUE PANIER -->
+<section class="section" data-view-cart>
+  <div class="container">
+    <div id="cart-full" class="checkout-layout" hidden>
+      <div>
+        <div class="table-wrap">
+          <table class="cart-table">
+            <caption class="skip-link">Articles de votre panier</caption>
+            <thead>
+              <tr><th scope="col">Pièce</th><th scope="col">Prix</th><th scope="col">Quantité</th><th scope="col">Total</th><th scope="col"><span class="skip-link">Actions</span></th></tr>
+            </thead>
+            <tbody data-cart-tbody></tbody>
+          </table>
+        </div>
+        <p style="margin-top:1.4rem;display:flex;gap:1.6rem;flex-wrap:wrap">
+          <a class="text-link" href="collections.html">Continuer mes découvertes</a>
+          <button class="line-remove" type="button" data-cart-clear style="text-transform:uppercase">Vider le panier</button>
+        </p>
+      </div>
+      <aside class="cart-summary" aria-label="Récapitulatif de la commande">
+        <h2 style="font-size:1.3rem">Récapitulatif</h2>
+        <div class="row"><span>Sous-total</span><span data-sum-sub>—</span></div>
+        <div class="row"><span>Livraison assurée</span><span data-sum-ship>—</span></div>
+        <div class="row"><span>Emballage cadeau &amp; gravure</span><span style="color:var(--success)">Offerts</span></div>
+        <div class="row grand"><span>Total TTC</span><span data-sum-total>—</span></div>
+        <p class="small" style="color:var(--muted)">Livraison offerte dès 500 € — remise contre signature, colis neutre.</p>
+        <button class="btn btn--gold" type="button" data-go-checkout style="width:100%">Passer commande</button>
+        <p class="small center" style="margin-top:.8rem"><a href="rendez-vous.html">Ou venez les voir en boutique</a></p>
+      </aside>
+    </div>
+
+    <div class="cart-empty" data-cart-empty>
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" width="56" height="56" style="margin:0 auto 1.4rem;color:var(--gold)" aria-hidden="true"><path d="M10 22 L21 9 L43 9 L54 22 L32 55 Z"/><path d="M10 22 H54 M21 9 L27 22 M43 9 L37 22 M27 22 L32 55 M37 22 L32 55"/></svg>
+      <h2 style="font-size:1.5rem">Votre panier attend son premier éclat</h2>
+      <p class="small">Vingt-six créations serties main vous attendent dans la boutique.</p>
+      <p style="margin-top:1.4rem"><a class="btn" href="collections.html">Explorer la boutique</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- VUE COMMANDE -->
+<section class="section" data-view-checkout hidden>
+  <div class="container">
+    <div class="checkout-layout">
+      <div>
+        <h2 style="margin-bottom:1.8rem">Coordonnées &amp; livraison</h2>
+        <form data-form-checkout novalidate>
+          <fieldset>
+            <legend>Vos coordonnées</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="co-prenom">Prénom <span class="req">*</span></label>
+                <input type="text" id="co-prenom" name="prenom" autocomplete="given-name" required>
+                <span class="error">Champ requis.</span>
+              </div>
+              <div class="field">
+                <label for="co-nom">Nom <span class="req">*</span></label>
+                <input type="text" id="co-nom" name="nom" autocomplete="family-name" required>
+                <span class="error">Champ requis.</span>
+              </div>
+              <div class="field">
+                <label for="co-email">E-mail <span class="req">*</span></label>
+                <input type="email" id="co-email" name="email" autocomplete="email" required>
+                <span class="error">Adresse e-mail invalide.</span>
+              </div>
+              <div class="field">
+                <label for="co-ville">Ville <span class="req">*</span></label>
+                <input type="text" id="co-ville" name="ville" autocomplete="address-level2" required>
+                <span class="error">Champ requis.</span>
+              </div>
+              <div class="field field--full">
+                <label for="co-adresse">Adresse <span class="req">*</span></label>
+                <input type="text" id="co-adresse" name="adresse" autocomplete="street-address" required placeholder="N°, rue, bâtiment…">
+                <span class="error">Champ requis.</span>
+              </div>
+              <div class="field">
+                <label for="co-cp">Code postal <span class="req">*</span></label>
+                <input type="text" id="co-cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required>
+                <span class="error">Cinq chiffres, s&rsquo;il vous plaît.</span>
+              </div>
+              <div class="field">
+                <label for="co-pays">Pays</label>
+                <div class="select-wrap">
+                  <select id="co-pays" name="pays"><option>France</option><option>Belgique</option><option>Suisse</option><option>Luxembourg</option><option>Autre (nous contacter)</option></select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Options</legend>
+            <div class="form-grid">
+              <div class="field field--full">
+                <label class="checkbox-row" for="co-cadeau">
+                  <input type="checkbox" id="co-cadeau" name="cadeau">
+                  <span>C&rsquo;est un cadeau : écrin neutre, facture sans prix, mot manuscrit ci-dessous.</span>
+                </label>
+              </div>
+              <div class="field field--full" data-gift-note hidden>
+                <label for="co-mot">Votre mot (manuscrit, 120 caractères)</label>
+                <input type="text" id="co-mot" name="mot" maxlength="120">
+              </div>
+              <div class="field field--full">
+                <label for="co-notes">Instructions de livraison</label>
+                <input type="text" id="co-notes" name="notes" placeholder="Code, étage, préférence de créneau…">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Règlement (démonstration — aucun paiement réel)</legend>
+            <div class="radio-cards" role="radiogroup" aria-label="Mode de règlement">
+              <label class="radio-card"><input type="radio" name="paiement" value="Carte bancaire" checked><span><b>Carte bancaire</b><small>Simulation — aucune carte demandée</small></span></label>
+              <label class="radio-card"><input type="radio" name="paiement" value="Virement"><span><b>Virement</b><small>Coordonnées envoyées par e-mail</small></span></label>
+              <label class="radio-card"><input type="radio" name="paiement" value="Paiement en boutique"><span><b>En boutique</b><small>Sur rendez-vous, au square Vendôme</small></span></label>
+            </div>
+          </fieldset>
+          <div class="field field--full">
+            <label class="checkbox-row" for="co-cgv">
+              <input type="checkbox" id="co-cgv" required>
+              <span>J&rsquo;ai lu et j&rsquo;accepte les <a href="cgv.html">conditions générales de vente</a> et la <a href="confidentialite.html">politique de confidentialité</a>. <span class="req">*</span></span>
+            </label>
+          </div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem">
+            <button class="btn btn--outline" type="button" data-back-cart>Retour au panier</button>
+            <button class="btn btn--gold" type="submit">Valider ma commande</button>
+          </div>
+        </form>
+      </div>
+      <aside class="cart-summary" aria-label="Récapitulatif de commande">
+        <h2 style="font-size:1.3rem">Votre commande</h2>
+        <div data-checkout-lines></div>
+        <div class="row grand" style="display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:.8rem;padding-top:1rem;font-family:var(--ff-display);font-size:1.25rem;font-weight:600"><span>Total TTC</span><span data-checkout-total>—</span></div>
+        <ul class="product-assurance" style="list-style:none;padding:1.2rem 0 0;margin-top:1.2rem;border-top:1px solid var(--line)">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Transport assuré spécifique joaillerie</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Retours sous 30 jours (hors gravure / sur mesure)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg>Entretien à vie en atelier</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIRMATION -->
+<section class="confirmation" data-view-confirm hidden>
+  <div class="confirmation__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m4 12.5 5.5 5.5L20 6.5"/></svg></div>
+  <h1 style="font-size:clamp(2rem,4vw,3rem)">Merci — commande confirmée</h1>
+  <p>Votre commande <b data-order-num></b> est enregistrée. Un e-mail récapitulatif part à l&rsquo;instant ; l&rsquo;atelier prépare votre écrin.</p>
+  <div class="recap" data-order-recap></div>
+  <p class="small" style="color:var(--muted)">Démonstration : aucune commande réelle, aucun paiement, aucune donnée transmise.</p>
+  <p style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem">
+    <a class="btn" href="collections.html">Continuer mes découvertes</a>
+    <a class="btn btn--outline" href="index.html">Retour à l&rsquo;accueil</a>
+  </p>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const $ = s => document.querySelector(s);
+  const viewCart = $("[data-view-cart]");
+  const viewCheckout = $("[data-view-checkout]");
+  const viewConfirm = $("[data-view-confirm]");
+  const full = $("#cart-full"), emptyEl = $("[data-cart-empty]");
+  const FRAIS = 25;
+
+  function renderCart() {
+    const items = ECLAT.cart.items();
+    const hasItems = items.length > 0;
+    full.hidden = !hasItems;
+    emptyEl.hidden = hasItems;
+    $("[data-title]").textContent = hasItems ? "Votre panier" : "Votre panier attend";
+    if (!hasItems) return;
+    const tbody = $("[data-cart-tbody]");
+    tbody.innerHTML = "";
+    let sub = 0;
+    items.forEach((it, idx) => {
+      const p = (ECLAT.PRODUITS || []).find(p => p.id === it.id);
+      if (!p) return;
+      sub += p.prix * it.qty;
+      const optTxt = it.opts ? Object.entries(it.opts).filter(([, v]) => v).map(([k, v]) => `${k === "taille" ? "Taille" : "Gravure"} : ${v}`).join(" · ") : "";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td><div class="cell-prod">
+          <img src="${p.image}" alt="" width="72" height="90" loading="lazy">
+          <span><a href="piece.html?id=${p.id}"><b>${p.nom}</b></a><span class="small" style="color:var(--muted)">${ECLAT.cats[p.categorie] || ""}${optTxt ? " — " + optTxt : ""}</span></span>
+        </div></td>
+        <td>${ECLAT.fmtPrix(p.prix)}</td>
+        <td><div class="qty">
+          <button type="button" data-qminus aria-label="Diminuer">−</button>
+          <input type="number" value="${it.qty}" min="1" max="10" data-qinput aria-label="Quantité">
+          <button type="button" data-qplus aria-label="Augmenter">+</button>
+        </div></td>
+        <td><b>${ECLAT.fmtPrix(p.prix * it.qty)}</b></td>
+        <td><button class="line-remove" type="button" data-remove>Retirer</button></td>`;
+      tr.querySelector("[data-qminus]").addEventListener("click", () => { ECLAT.cart.setQty(idx, (+tr.querySelector("[data-qinput]").value) - 1); });
+      tr.querySelector("[data-qplus]").addEventListener("click", () => { ECLAT.cart.setQty(idx, (+tr.querySelector("[data-qinput]").value) + 1); });
+      tr.querySelector("[data-qinput]").addEventListener("change", e => { ECLAT.cart.setQty(idx, +e.target.value); });
+      tr.querySelector("[data-remove]").addEventListener("click", () => { ECLAT.cart.remove(idx); });
+      tbody.appendChild(tr);
+    });
+    const ship = sub >= 500 ? 0 : FRAIS;
+    $("[data-sum-sub]").textContent = ECLAT.fmtPrix(sub);
+    $("[data-sum-ship]").textContent = ship === 0 ? "Offerte" : ECLAT.fmtPrix(ship);
+    $("[data-sum-total]").textContent = ECLAT.fmtPrix(sub + ship);
+    renderCheckoutSide(sub, ship);
+    if (ECLAT.cart.count() === 0) renderCart();
+  }
+
+  function renderCheckoutSide(sub, ship) {
+    const wrap = $("[data-checkout-lines]");
+    wrap.innerHTML = "";
+    ECLAT.cart.items().forEach(it => {
+      const p = (ECLAT.PRODUITS || []).find(p => p.id === it.id);
+      if (!p) return;
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = `<span>${it.qty} × ${p.nom}</span><span>${ECLAT.fmtPrix(p.prix * it.qty)}</span>`;
+      wrap.appendChild(row);
+    });
+    const shipRow = document.createElement("div");
+    shipRow.className = "row";
+    shipRow.innerHTML = `<span>Livraison</span><span>${ship === 0 ? "Offerte" : ECLAT.fmtPrix(ship)}</span>`;
+    wrap.appendChild(shipRow);
+    $("[data-checkout-total]").textContent = ECLAT.fmtPrix(sub + ship);
+  }
+
+  document.addEventListener("eclat:cart", () => {
+    if (!viewConfirm.hidden) return;
+    renderCart();
+    if (ECLAT.cart.items().length === 0 && !viewCheckout.hidden) showView("cart");
+  });
+  $("[data-cart-clear]").addEventListener("click", () => ECLAT.cart.clear());
+
+  function showView(v) {
+    viewCart.hidden = v !== "cart";
+    viewCheckout.hidden = v !== "checkout";
+    viewConfirm.hidden = v !== "confirm";
+    $("[data-crumb-label]").textContent = v === "cart" ? "Panier" : v === "checkout" ? "Commande" : "Confirmation";
+    $("[data-title]").textContent = v === "cart" ? "Votre panier" : v === "checkout" ? "Finaliser la commande" : "Commande confirmée";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  $("[data-go-checkout]").addEventListener("click", () => { renderCart(); showView("checkout"); });
+  $("[data-back-cart]").addEventListener("click", () => showView("cart"));
+  $("#co-cadeau").addEventListener("change", e => { $("[data-gift-note]").hidden = !e.target.checked; });
+
+  $("[data-form-checkout]").addEventListener("submit", e => {
+    e.preventDefault();
+    const form = e.target;
+    let ok = true;
+    form.querySelectorAll("[required]").forEach(inp => {
+      const field = inp.closest(".field") || inp.closest(".checkbox-row")?.parentElement;
+      let valid = inp.type === "checkbox" ? inp.checked :
+        inp.type === "email" ? /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value) :
+        inp.name === "cp" ? /^[0-9]{5}$/.test(inp.value) :
+        inp.value.trim().length > 0;
+      if (field) field.classList.toggle("is-invalid", !valid);
+      if (!valid) ok = false;
+    });
+    if (!ok) return;
+    const data = new FormData(form);
+    const num = "EO-" + new Date().getFullYear() + "-" + String(Math.floor(1000 + Math.random() * 9000));
+    const items = ECLAT.cart.items();
+    let sub = 0;
+    const lines = items.map(it => {
+      const p = (ECLAT.PRODUITS || []).find(p => p.id === it.id);
+      sub += p.prix * it.qty;
+      const optTxt = it.opts ? Object.entries(it.opts).filter(([, v]) => v).map(([k, v]) => `${k === "taille" ? "Taille" : "Gravure"} : ${v}`).join(" · ") : "";
+      return `<li><span>${it.qty} × ${p.nom}${optTxt ? " <em>(" + optTxt + ")</em>" : ""}</span><span>${ECLAT.fmtPrix(p.prix * it.qty)}</span></li>`;
+    }).join("");
+    const ship = sub >= 500 ? 0 : FRAIS;
+    $("[data-order-num]").textContent = num;
+    $("[data-order-recap]").innerHTML = `
+      <h3>Récapitulatif</h3>
+      <ul>${lines}
+        <li><span>Livraison</span><span>${ship === 0 ? "Offerte" : ECLAT.fmtPrix(ship)}</span></li>
+        <li><span>Règlement</span><span>${data.get("paiement")}</span></li>
+        <li><span>Destination</span><span>${data.get("prenom")} ${data.get("nom")}, ${data.get("adresse")}, ${data.get("cp")} ${data.get("ville")}, ${data.get("pays")}</span></li>
+        <li><span>Total TTC</span><span><b>${ECLAT.fmtPrix(sub + ship)}</b></span></li>
+      </ul>`;
+    ECLAT.cart.clear();
+    showView("confirm");
+  });
+
+  renderCart();
+});
+</script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" style="color:var(--ivory)"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><linearGradient id="or" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8B77C"/><stop offset=".5" stop-color="#B08D57"/><stop offset="1" stop-color="#8A6A3B"/></linearGradient></defs><g fill="none" stroke="url(#or)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M10 22 L21 9 L43 9 L54 22 L32 55 Z"/><path d="M10 22 H54"/><path d="M21 9 L27 22 M43 9 L37 22"/><path d="M27 22 L32 55 M37 22 L32 55"/><path d="M52 6 V14 M48 10 H56" stroke-width="2"/></g></svg><span><span class="brand-name">Éclat d&rsquo;Or</span><span class="brand-sub">Joaillerie · Paris</span></span></a>
+        <p>Depuis 1932, notre atelier façonne des bijoux destinés à traverser le temps — et à être transmis.</p>
+        <h3>Lettre de la maison</h3>
+        <p>Nouvelles collections, carnets d&rsquo;atelier et invitations privées, une fois par saison.</p>
+        <form class="news-form" novalidate>
+          <label class="skip-link" for="news-email">Votre adresse e-mail</label>
+          <input type="email" id="news-email" name="email" placeholder="votre@email.fr" autocomplete="email" required>
+          <button type="submit">S&rsquo;inscrire</button>
+        </form>
+      </div>
+      <div>
+        <h3>La Maison</h3>
+        <ul class="footer-links">
+          <li><a href="maison.html">Notre histoire</a></li>
+          <li><a href="maison.html#savoir-faire">Savoir-faire &amp; atelier</a></li>
+          <li><a href="maison.html#equipe">Artisans &amp; équipe</a></li>
+          <li><a href="haute-joaillerie.html">Haute joaillerie</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="avis.html">Avis clients</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Boutique</h3>
+        <ul class="footer-links">
+          <li><a href="collections.html">Toutes les pièces</a></li>
+          <li><a href="collections.html?cat=bagues">Bagues</a></li>
+          <li><a href="collections.html?cat=colliers">Colliers</a></li>
+          <li><a href="collections.html?cat=bracelets">Bracelets</a></li>
+          <li><a href="collections.html?cat=montres">Montres</a></li>
+          <li><a href="favoris.html">Mes favoris</a></li>
+          <li><a href="panier.html">Mon panier</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Services &amp; Contact</h3>
+        <ul class="footer-links">
+          <li><a href="sur-mesure.html">Création sur mesure</a></li>
+          <li><a href="rendez-vous.html">Prendre rendez-vous</a></li>
+          <li><a href="services.html">Gravure, retouche, réparation</a></li>
+          <li><a href="guides.html">Guides du joaillier</a></li>
+          <li><a href="services.html#livraison">Livraison &amp; retours</a></li>
+          <li><a href="contact.html">Nous écrire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Matrice Studio. Tous droits réservés.</span>
+      <nav class="legal-links" aria-label="Liens légaux">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+        <a href="cgv.html">Conditions de vente</a>
+      </nav>
+      <div class="footer-cta-row">
+        <a class="projects-btn" href="https://www.example.com" target="_blank" rel="noopener noreferrer">Découvrir nos autres projets
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9"/><path d="M20 14v6H4V4h6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-zone" hidden></div>
+<script src="assets/js/products.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- HÉROS DE PAGE -->
+<section class="hero hero--page" style="min-height:38svh">
+  <div class="hero__bg">
+    <img src="assets/img/hero/diamants-nuit.webp" alt="Diamants posés sur un tissu bleu nuit" loading="lazy" width="1600" height="1067">
+  </div>
+  <div class="container hero__inner">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li aria-current="page">Favoris</li>
+      </ul>
+    </nav>
+    <h1 data-title>Mes favoris</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="product-grid" data-fav-grid></div>
+    <div class="cart-empty" data-fav-empty>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="56" height="56" style="margin:0 auto 1.4rem;color:var(--gold)" aria-hidden="true"><path d="M12 21c-4.9-3.4-9-6.7-9-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.3-4.1 7.6-9 11z"/></svg>
+      <h2 style="font-size:1.5rem">Aucun favori pour l&rsquo;instant</h2>
+      <p class="small">Cliquez sur le cœur d&rsquo;une pièce pour la mettre de côté — elle vous attendra ici.</p>
+      <p style="margin-top:1.4rem"><a class="btn" href="collections.html">Explorer la boutique</a></p>
+    </div>
+    <p class="small center" style="color:var(--muted);margin-top:2.5rem">Vos favoris sont conservés dans ce navigateur uniquement. Pour les partager avec quelqu&rsquo;un de cher… invitez-le au rendez-vous.</p>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector("[data-fav-grid]");
+  const emptyEl = document.querySelector("[data-fav-empty]");
+  const title = document.querySelector("[data-title]");
+
+  function render() {
+    const ids = ECLAT.wishes.list();
+    grid.innerHTML = "";
+    const pieces = ids.map(id => (ECLAT.PRODUITS || []).find(p => p.id === id)).filter(Boolean);
+    emptyEl.hidden = pieces.length > 0;
+    title.textContent = pieces.length ? `Mes favoris (${pieces.length})` : "Mes favoris";
+    pieces.forEach(p => grid.appendChild(ECLAT.productCard(p, { tax: true })));
+    requestAnimationFrame(() => grid.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible")));
+  }
+  document.addEventListener("eclat:wishes", render);
+  render();
+});
+</script>

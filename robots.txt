@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /templates/
+
+Sitemap: https://www.eclatdor-paris.fr/sitemap.xml
